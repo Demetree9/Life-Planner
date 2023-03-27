@@ -1,0 +1,89 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package javaapplication1;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Random;
+
+/**
+ *
+ * @author 19088
+ */
+public class JavaApplication1 {
+
+    public static void main(String[] args) {
+        //Main Tasks string:
+        ArrayList<String> thingsToDo = new ArrayList<String>();
+        String toDo1 = "Go to Spanish class. ";
+        String toDo2 = "Go to Coding class. ";
+        String toDo3 = "Go to work. ";
+        String toDo4 = "Nothing for now. ";
+        String toDo5 = "Show time! ";
+
+        //Adding tasks to Main string:
+        thingsToDo.add(toDo1);
+        thingsToDo.add(toDo2);
+        thingsToDo.add(toDo3);
+        thingsToDo.add(toDo4);
+        thingsToDo.add(toDo5);
+
+        //User imput day of the week    
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("What day of the week is it? ");
+        String daysOfTheWeek = keyboard.nextLine();
+
+        //Random Number Generator
+        Random randomGenerator = new Random();
+        int diceSevenGym = randomGenerator.nextInt(7);
+        int diceSevenJob = randomGenerator.nextInt(7);
+
+        //Randomly assigned Strings:
+        ArrayList<String> sporaticTasks = new ArrayList<String>();
+        String sporatic1 = "Go to the gym. ";
+        String sporatic2 = "Apply for jobs. ";
+
+        //If statements for sporatic tasks:
+        if (diceSevenGym > 3) {
+            System.out.print(sporatic1);
+        }
+        if (diceSevenJob > 3) {
+            System.out.print(sporatic2);
+        }
+
+        //Adding tasks potentially to sporaticTasks
+        sporaticTasks.add(sporatic1);
+        sporaticTasks.add(sporatic2);
+
+        //if statements for days of the week
+        //Monday
+        if (daysOfTheWeek.equalsIgnoreCase("Monday")) {
+            System.out.println(toDo4);
+        } //Tuesday
+        else if (daysOfTheWeek.equalsIgnoreCase("Tuesday")) {
+            System.out.println(toDo1 + toDo2);
+        } //Wednesday
+        else if (daysOfTheWeek.equalsIgnoreCase("Wednesday")) {
+            System.out.println(toDo4);
+        } //Thursday
+        else if (daysOfTheWeek.equalsIgnoreCase("Thursday")) {
+            System.out.println(toDo1 + toDo2);
+        } //Friday
+        else if (daysOfTheWeek.equalsIgnoreCase("Friday")) {
+            System.out.println(toDo4);
+        } //Saturday
+        else if (daysOfTheWeek.equalsIgnoreCase("Saturday")) {
+            System.out.println(toDo5);
+        } //Sunday
+        else if (daysOfTheWeek.equalsIgnoreCase("Sunday")) {
+            System.out.println(toDo4);
+        } else {
+            System.out.println("Invalid input!");
+        }
+
+    }
+
+}
